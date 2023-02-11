@@ -13,22 +13,25 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);}
-        @org.junit.jupiter.api.Test
-        void shouldCalculateForRegisteredAndOverLimit () {
-            BonusService service = new BonusService();
+        Assertions.assertEquals(expected, actual);
+    }
 
-            // подготавливаем данные:
-            long amount = 1_000_000;
-            boolean registered = true;
-            long expected = 500;
+    @org.junit.jupiter.api.Test
+    void shouldCalculateForRegisteredAndOverLimit() {
+        BonusService service = new BonusService();
 
-            // вызываем целевой метод:
-            long actual = service.calculate(amount, registered);
+        // подготавливаем данные:
+        long amount = 1_000_000;
+        boolean registered = true;
+        long expected = 500;
 
-            // производим проверку (сравниваем ожидаемый и фактический):
-            Assertions.assertEquals(expected, actual);
-        }
+        // вызываем целевой метод:
+        long actual = service.calculate(amount, registered);
+
+        // производим проверку (сравниваем ожидаемый и фактический):
+        Assertions.assertEquals(expected, actual);
+    }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForUnregisteredAndUnderLimit() {
         BonusService service = new BonusService();
@@ -40,7 +43,9 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);}
+        Assertions.assertEquals(expected, actual);
+    }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForUnregisteredAndOverLimit() {
         BonusService service = new BonusService();
@@ -52,7 +57,9 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);}
+        Assertions.assertEquals(expected, actual);
+    }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForUnregisteredAndFrontierLimit() {
         BonusService service = new BonusService();
@@ -64,7 +71,9 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);}
+        Assertions.assertEquals(expected, actual);
+    }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForRegisteredAndFrontierLimit() {
         BonusService service = new BonusService();
@@ -76,6 +85,7 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
 
         // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);}
+        Assertions.assertEquals(expected, actual);
     }
+}
 
